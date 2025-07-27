@@ -32,8 +32,10 @@ export default function RootLayout({
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
                 <ThemeProvider>
-                    <NavBar />
-                    {children}
+                    <div className="bg-background-light-primary text-text-dark-primary dark:bg-background-dark-primary dark:text-text-light-primary">
+                        <NavBar />
+                        {children}
+                    </div>
                 </ThemeProvider>
             </body>
         </html>
