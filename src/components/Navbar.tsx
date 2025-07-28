@@ -23,13 +23,27 @@ export default function NavBar() {
     };
 
     return (
-        <nav className="border-border-light bg-background-light-primary/75 dark:border-border-dark dark:bg-background-dark-primary/75 sticky top-0 z-10 flex h-16 w-full flex-row justify-between border-b-1 backdrop-blur-sm">
-            <div className="text-text-dark-secondary dark:text-text-light-secondary hidden flex-row items-center gap-10 md:flex">
-                <Link href="/">Home</Link>
-                <Link href="/about">About</Link>
-                <Link href="/projects">Projects</Link>
+        <nav className="text-text-dark-secondary dark:text-text-light-secondary px-mobile-header-footer-x md:px-desktop-small-x lg:px-desktop-large-x border-border-light bg-background-light-primary/75 dark:border-border-dark dark:bg-background-dark-primary/75 sticky top-0 z-10 flex h-16 w-full flex-row justify-between border-b-1 backdrop-blur-sm">
+            <div className="flex flex-row items-center gap-20">
+                <Link href="/" className="font-bold">
+                    KC
+                </Link>
+                <div className="hidden flex-row items-center gap-10 text-sm md:flex">
+                    <Link
+                        href="/about"
+                        className="hover:text-text-dark-primary dark:hover:text-text-light-primary"
+                    >
+                        About
+                    </Link>
+                    <Link
+                        href="/projects"
+                        className="hover:text-text-dark-primary dark:hover:text-text-light-primary"
+                    >
+                        Projects
+                    </Link>
+                </div>
             </div>
-            <div className="flex flex-row items-center gap-4">
+            <div className="flex flex-row items-center gap-8">
                 <div className="border-border-light dark:border-border-dark flex flex-row gap-2 rounded-full border-1 p-1">
                     <button
                         onClick={() => changeTheme("light")}
@@ -52,7 +66,7 @@ export default function NavBar() {
                 </div>
             </div>
             {isOpen && (
-                <div className="bg-background-light-primary dark:bg-background-dark-primary fixed inset-x-0 top-16 flex h-[calc(100vh-4rem)] flex-col gap-8 md:hidden">
+                <div className="px-mobile-x bg-background-light-primary dark:bg-background-dark-primary fixed inset-x-0 top-16 flex h-[calc(100vh-4rem)] flex-col gap-6 py-6 md:hidden">
                     <Link href="/" onClick={handleMenuOpen}>
                         Home
                     </Link>
