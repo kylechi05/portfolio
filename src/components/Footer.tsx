@@ -1,7 +1,9 @@
+import { SocialMediaBar } from "./SocialMediaBar";
+
 export default function Footer() {
     return (
-        <footer className="text-text-dark-secondary dark:text-text-light-secondary px-mobile-header-footer-x md:px-desktop-small-x lg:px-desktop-large-x border-border-light bg-background-light-primary dark:border-border-dark dark:bg-background-dark-primary flex w-full flex-row border-t-1 py-3 md:py-6">
-            <div>Footer</div>
+        <footer className="justify-center text-text-dark-secondary border-border-light dark:border-border-dark dark:text-text-light-secondary px-mobile-header-footer-x md:px-desktop-s-x lg:px-desktop-l-x xl:px-desktop-xl-x bg-background-light-primary dark:bg-background-dark-primary flex w-full flex-col flex-row border-t-1 py-3 md:py-6">
+            <SocialMediaBar />
         </footer>
     );
 }

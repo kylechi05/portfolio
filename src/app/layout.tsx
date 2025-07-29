@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import { ThemeProvider } from "@/context/ThemeContext";
@@ -7,19 +7,9 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import NavBar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
     title: "Kyle Chi",
-    description: "Kyle Chi's professional portfolio.",
+    description: "Kyle Chi's portfolio.",
 };
 
 export default function RootLayout({
@@ -29,13 +19,13 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
+            <body className="font-montserrat antialiased">
                 <ThemeProvider>
-                    <div className="bg-background-light-primary text-text-dark-primary dark:bg-background-dark-primary dark:text-text-light-primary">
+                    <div className="bg-background-light-primary text-text-dark-primary dark:bg-background-dark-primary dark:text-text-light-primary min-h-screen">
                         <NavBar />
-                        <div className="px-mobile-x md:px-desktop-small-x lg:px-desktop-large-x">{children}</div>
+                        <div className="px-mobile-x md:px-desktop-s-x lg:px-desktop-l-x xl:px-desktop-xl-x pb-12">
+                            {children}
+                        </div>
                         <Footer />
                     </div>
                 </ThemeProvider>

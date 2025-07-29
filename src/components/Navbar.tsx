@@ -5,6 +5,7 @@ import { useState } from "react";
 
 import { useTheme } from "@/context/ThemeContext";
 import { MenuIcon, MoonIcon, SunIcon } from "@/components/icons";
+import { HoverLink } from "@/components/HoverLink";
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,37 +24,27 @@ export default function NavBar() {
     };
 
     return (
-        <nav className="text-text-dark-secondary dark:text-text-light-secondary px-mobile-header-footer-x md:px-desktop-small-x lg:px-desktop-large-x border-border-light bg-background-light-primary/75 dark:border-border-dark dark:bg-background-dark-primary/75 sticky top-0 z-10 flex h-16 w-full flex-row justify-between border-b-1 backdrop-blur-sm">
+        <nav className="text-text-dark-secondary dark:text-text-light-secondary px-mobile-header-footer-x md:px-desktop-s-x lg:px-desktop-l-x xl:px-desktop-xl-x border-border-light bg-background-light-primary/80 dark:border-border-dark dark:bg-background-dark-primary/80 sticky top-0 z-10 flex h-16 w-full flex-row justify-between border-b-1 backdrop-blur-sm">
             <div className="flex flex-row items-center gap-20">
                 <Link href="/" className="font-bold">
                     KC
                 </Link>
                 <div className="hidden flex-row items-center gap-10 text-sm md:flex">
-                    <Link
-                        href="/about"
-                        className="hover:text-text-dark-primary dark:hover:text-text-light-primary"
-                    >
-                        About
-                    </Link>
-                    <Link
-                        href="/projects"
-                        className="hover:text-text-dark-primary dark:hover:text-text-light-primary"
-                    >
-                        Projects
-                    </Link>
+                    <HoverLink href="/about">About</HoverLink>
+                    <HoverLink href="/projects">Projects</HoverLink>
                 </div>
             </div>
             <div className="flex flex-row items-center gap-8">
                 <div className="border-border-light dark:border-border-dark flex flex-row gap-2 rounded-full border-1 p-1">
                     <button
                         onClick={() => changeTheme("light")}
-                        className={`dark:stroke-text-light-secondary dark:hover:stroke-text-light-primary flex size-8 cursor-pointer items-center justify-center rounded-full ${theme === "light" ? "bg-background-light-secondary stroke-text-dark-primary" : null}`}
+                        className={`dark:stroke-text-light-secondary dark:hover:stroke-text-light-primary flex size-8 cursor-pointer items-center justify-center rounded-full ${theme === "light" ? "bg-background-light-secondary/75 stroke-text-dark-primary" : null}`}
                     >
                         <SunIcon />
                     </button>
                     <button
                         onClick={() => changeTheme("dark")}
-                        className={`stroke-text-dark-secondary dark:stroke-text-light-primary dark:bg-background-dark-secondary flex size-8 cursor-pointer items-center justify-center rounded-full ${theme !== "dark" ? "hover:stroke-text-dark-primary" : null}`}
+                        className={`stroke-text-dark-secondary dark:stroke-text-light-primary dark:bg-background-dark-secondary/75 flex size-8 cursor-pointer items-center justify-center rounded-full ${theme !== "dark" ? "hover:stroke-text-dark-primary" : null}`}
                     >
                         <MoonIcon />
                     </button>

@@ -4,17 +4,78 @@
 
 @theme {
     --color-background-light-primary: #faf7f0;
-    --color-background-light-secondary: #e6e3d8;
+    --color-background-light-secondary: #e5e4d8;
     --color-background-dark-primary: #101010;
     --color-background-dark-secondary: #252525;
-    --color-text-light-primary: #fafafa;
-    --color-text-light-secondary: #b0b0b0;
+    --color-text-light-primary: #e8e8e8;
+    --color-text-light-secondary: #c1c1c1;
     --color-text-dark-primary: #191919;
-    --color-text-dark-secondary: #505050;
-    --color-border-light: #dcd9ce;
-    --color-border-dark: #3a3a3a;
+    --color-text-dark-secondary: #404040;
+    --color-border-light: #bab7ac;
+    --color-border-dark: #555555;
     --spacing-mobile-x: 1rem;
     --spacing-mobile-header-footer-x: 1.5rem;
-    --spacing-desktop-small-x: 3rem;
-    --spacing-desktop-large-x: 8rem;
+    --spacing-desktop-s-x: 3rem;
+    --spacing-desktop-l-x: 8rem;
+    --spacing-desktop-xl-x: 14rem;
+    --font-montserrat: "Montserrat", sans-serif;
+    --font-geist: "Geist", sans-serif;
+    --font-geist-mono: "Geist Mono", monospace;
+}
+
+@theme inline {
+    --animate-first: moveVertical 30s ease infinite;
+    --animate-second: moveInCircle 20s reverse infinite;
+    --animate-third: moveInCircle 40s linear infinite;
+    --animate-fourth: moveHorizontal 40s ease infinite;
+    --animate-fifth: moveInCircle 20s ease infinite;
+    --animate-gradientShift:  gradientShift 8s ease-in-out infinite alternate;
+
+    @keyframes moveHorizontal {
+        0% {
+            transform: translateX(-50%) translateY(-10%);
+        }
+        50% {
+            transform: translateX(50%) translateY(10%);
+        }
+        100% {
+            transform: translateX(-50%) translateY(-10%);
+        }
+    }
+
+    @keyframes moveInCircle {
+        0% {
+            transform: rotate(0deg);
+        }
+        50% {
+            transform: rotate(180deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes moveVertical {
+        0% {
+            transform: translateY(-50%);
+        }
+        50% {
+            transform: translateY(50%);
+        }
+        100% {
+            transform: translateY(-50%);
+        }
+    }
+
+    @keyframes gradientShift {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
 }
