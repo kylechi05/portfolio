@@ -1,8 +1,14 @@
-import { SocialMediaBar } from "./SocialMediaBar";
+import { Suspense } from "react";
 
-export default function Footer() {
+import { SocialMediaBar } from "./SocialMediaBar";
+import { SpotifyWidget } from "./SpotifyWidget";
+
+export default async function Footer() {
     return (
-        <footer className="justify-center text-text-dark-secondary border-border-light dark:border-border-dark dark:text-text-light-secondary px-mobile-header-footer-x md:px-desktop-s-x lg:px-desktop-l-x xl:px-desktop-xl-x bg-background-light-primary dark:bg-background-dark-primary flex w-full flex-col flex-row border-t-1 py-3 md:py-6">
+        <footer className="text-text-dark-secondary border-border-light dark:border-border-dark dark:text-text-light-secondary px-mobile-header-footer-x md:px-desktop-s-x lg:px-desktop-l-x xl:px-desktop-xl-x bg-background-light-primary dark:bg-background-dark-primary flex w-full flex-col items-center justify-between gap-y-6 border-t-1 py-8 md:flex-row md:py-16">
+            <Suspense fallback={<div>Loading Spotify Info...</div>}>
+                <SpotifyWidget />
+            </Suspense>
             <SocialMediaBar />
         </footer>
     );

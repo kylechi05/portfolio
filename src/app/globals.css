@@ -9,6 +9,8 @@
     --color-background-dark-secondary: #252525;
     --color-text-light-primary: #e8e8e8;
     --color-text-light-secondary: #c1c1c1;
+    --color-text-home-dark-primary: #086940;
+    --color-text-home-dark-secondary: #567065;
     --color-text-dark-primary: #191919;
     --color-text-dark-secondary: #404040;
     --color-border-light: #bab7ac;
@@ -18,9 +20,11 @@
     --spacing-desktop-s-x: 3rem;
     --spacing-desktop-l-x: 8rem;
     --spacing-desktop-xl-x: 14rem;
-    --font-montserrat: "Montserrat", sans-serif;
-    --font-geist: "Geist", sans-serif;
-    --font-geist-mono: "Geist Mono", monospace;
+    --spacing-page-mobile-y: 3rem;
+    --spacing-page-desktop-y: 8rem;
+    --font-montserrat: var(--font-montserrat);
+    --font-space-grotesk: var(--font-space-grotesk);
+    --font-unbounded: var(--font-unbounded);
 }
 
 @theme inline {
@@ -79,3 +83,4 @@
         }
     }
 }
+

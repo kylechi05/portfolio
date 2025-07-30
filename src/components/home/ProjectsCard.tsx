@@ -30,8 +30,10 @@ export const ProjectsCard = ({
             <div
                 className={`dark:bg-background-dark-secondary bg-background-light-secondary relative z-30 flex flex-col gap-3 rounded-[20px] px-8 py-12 ${className}`}
             >
-                <h3 className="text-lg font-semibold">{title}</h3>
-                <p className="text-text-dark-secondary dark:text-text-light-secondary text-sm">
+                <h3 className="dark:text-text-light-primary text-text-home-dark-primary text-lg font-semibold">
+                    {title}
+                </h3>
+                <p className="text-text-home-dark-secondary dark:text-text-light-secondary text-sm">
                     {description}
                 </p>
             </div>

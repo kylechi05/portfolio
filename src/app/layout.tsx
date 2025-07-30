@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Montserrat, Geist, Geist_Mono } from "next/font/google";
+import { Montserrat, Space_Grotesk, Unbounded } from "next/font/google";
+
 import "./globals.css";
 
 import { ThemeProvider } from "@/context/ThemeContext";
@@ -12,14 +13,32 @@ export const metadata: Metadata = {
     description: "Kyle Chi's portfolio.",
 };
 
+const montserrat = Montserrat({
+    subsets: ["latin"],
+    variable: "--font-montserrat",
+});
+
+const spaceGrotesk = Space_Grotesk({
+    subsets: ["latin"],
+    variable: "--font-space-grotesk",
+});
+
+const unbounded = Unbounded({
+    subsets: ["latin"],
+    variable: "--font-unbounded",
+});
+
 export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
-            <body className="font-montserrat antialiased">
+        <html
+            lang="en"
+            className={`${spaceGrotesk.variable} ${montserrat.variable} ${unbounded.variable} font-montserrat`}
+        >
+            <body className="tracking-wide antialiased">
                 <ThemeProvider>
                     <div className="bg-background-light-primary text-text-dark-primary dark:bg-background-dark-primary dark:text-text-light-primary min-h-screen">
                         <NavBar />
