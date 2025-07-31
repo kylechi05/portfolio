@@ -1,9 +1,10 @@
 import { HeadshotContainer } from "@/components/about/HeadshotContainer";
 import { Header } from "@/components/Header";
+import { SkillCard } from "@/components/SkillCard";
 
 export default function AboutPage() {
     return (
-        <div className="py-page-mobile-y md:py-page-desktop-y px-mobile-x md:px-desktop-s-x text-center md:text-start">
+        <div className="py-page-mobile-y md:py-page-desktop-y px-mobile-x md:px-desktop-s-x flex flex-col gap-12 text-center md:gap-16 md:text-start">
             <div>
                 <Header>About Me</Header>
                 <div className="flex flex-col items-center gap-x-10 gap-y-6 md:flex-row md:items-start lg:gap-x-16">
@@ -34,7 +35,9 @@ export default function AboutPage() {
             </div>
             <div>
                 <Header>Skills</Header>
-                <div>Next.js, React.js, HTML, CSS, Tailwind, Java, JavaScript, TypeScript, Python, Node, Docker, Kafka, Jest, Git, GraphQL, SQL</div>
+                <ul className="flex flex-row flex-wrap gap-3">
+                    <SkillCard skill="Next.js" />
+                </ul>
             </div>
         </div>
     );

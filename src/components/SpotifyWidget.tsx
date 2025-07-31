@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import type { SimplifiedArtist } from "spotify-types";
+import { RotatingBorderEffect } from "./RotatingBorderEffect";
 
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID ?? "";
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET ?? "";
@@ -61,65 +62,76 @@ export async function SpotifyWidget() {
         const track = song.track;
 
         return (
-            <div className="bg-background-light-secondary dark:bg-background-dark-secondary flex flex-row gap-5 rounded-full px-2 py-2 lg:max-w-1/2">
-                <a
-                    href={track.album.external_urls.spotify ?? ""}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="shrink-0"
-                >
-                    <Image
-                        className="block dark:hidden"
-                        src="/icons/Spotify_Primary_Logo_RGB_Black.png"
-                        alt="Spotify Black Logo"
-                        width={48}
-                        height={48}
-                    />
-                    <Image
-                        className="hidden dark:block"
-                        src="/icons/Spotify_Primary_Logo_RGB_White.png"
-                        alt="Spotify Black Logo"
-                        width={48}
-                        height={48}
-                    />
-                </a>
-
-                <div className="flex flex-col justify-between overflow-hidden">
-                    <p className="pr-2 text-xs leading-none">
-                        Last listened to
-                    </p>
-                    <div className="flex flex-col">
+            <RotatingBorderEffect
+                borderWidth={2}
+                className="w-full rounded-full lg:max-w-1/2"
+            >
+                <div className="rounded-full">
+                    <div className="bg-background-light-secondary dark:bg-background-dark-secondary relative z-1 flex flex-row gap-5 rounded-full px-2 py-2">
                         <a
-                            href={track.external_urls.spotify ?? ""}
+                            href={track.album.external_urls.spotify ?? ""}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-text-dark-primary dark:text-text-light-primary overflow-hidden pr-2 text-sm font-semibold text-nowrap text-ellipsis hover:underline"
+                            className="shrink-0"
                         >
-                            {track.name}
+                            <Image
+                                className="block dark:hidden"
+                                src="/icons/Spotify_Primary_Logo_RGB_Black.png"
+                                alt="Spotify Black Logo"
+                                width={48}
+                                height={48}
+                            />
+                            <Image
+                                className="hidden dark:block"
+                                src="/icons/Spotify_Primary_Logo_RGB_White.png"
+                                alt="Spotify Black Logo"
+                                width={48}
+                                height={48}
+                            />
                         </a>
-                        <span className="text-text-dark-secondary dark:text-text-light-secondary overflow-hidden pr-3 text-xs font-medium text-ellipsis whitespace-nowrap">
-                            {track.artists.map(
-                                (artist: SimplifiedArtist, idx: number) => (
-                                    <span key={idx}>
-                                        <a
-                                            href={
-                                                artist.external_urls.spotify ??
-                                                ""
-                                            }
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            className="hover:underline"
-                                        >
-                                            {artist.name}
-                                        </a>
-                                        {idx < track.artists.length - 1 && ", "}
-                                    </span>
-                                ),
-                            )}
-                        </span>
+                        <div className="flex flex-col justify-between overflow-hidden">
+                            <p className="pr-3 text-xs leading-none">
+                                Last listened to
+                            </p>
+                            <div className="flex flex-col">
+                                <a
+                                    href={track.external_urls.spotify ?? ""}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-text-dark-primary dark:text-text-light-primary overflow-hidden pr-2 text-sm font-semibold text-nowrap text-ellipsis hover:underline"
+                                >
+                                    {track.name}
+                                </a>
+                                <span className="text-text-dark-secondary dark:text-text-light-secondary overflow-hidden pr-3 text-xs font-medium text-ellipsis whitespace-nowrap">
+                                    {track.artists.map(
+                                        (
+                                            artist: SimplifiedArtist,
+                                            idx: number,
+                                        ) => (
+                                            <span key={idx}>
+                                                <a
+                                                    href={
+                                                        artist.external_urls
+                                                            .spotify ?? ""
+                                                    }
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="hover:underline"
+                                                >
+                                                    {artist.name}
+                                                </a>
+                                                {idx <
+                                                    track.artists.length - 1 &&
+                                                    ", "}
+                                            </span>
+                                        ),
+                                    )}
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </RotatingBorderEffect>
         );
     } catch (error) {
         console.log(error);

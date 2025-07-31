@@ -14,7 +14,7 @@
     --color-text-dark-primary: #191919;
     --color-text-dark-secondary: #404040;
     --color-border-light: #bab7ac;
-    --color-border-dark: #555555;
+    --color-border-dark: #3a3a3a;
     --spacing-mobile-x: 1rem;
     --spacing-mobile-header-footer-x: 1.5rem;
     --spacing-desktop-s-x: 3rem;
@@ -25,6 +25,18 @@
     --font-montserrat: var(--font-montserrat);
     --font-space-grotesk: var(--font-space-grotesk);
     --font-unbounded: var(--font-unbounded);
+    --color-dark-gradient-lavender: #885ffa;
+    --color-dark-gradient-magenta: #e736ff;
+    --color-dark-gradient-cyan: #1ff4ff;
+    --color-light-gradient-purple: #5900ff;
+    --color-light-gradient-magenta: #e736ff;
+    --color-light-gradient-orange: #fc9e05;
+}
+
+@property --spin-gradient-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 90deg;
 }
 
 @theme inline {
@@ -33,7 +45,19 @@
     --animate-third: moveInCircle 40s linear infinite;
     --animate-fourth: moveHorizontal 40s ease infinite;
     --animate-fifth: moveInCircle 20s ease infinite;
-    --animate-gradientShift:  gradientShift 8s ease-in-out infinite alternate;
+    --animate-gradientShift: gradientShift 8s ease-in-out infinite alternate;
+    --animate-spin-gradient: spinMovingGradient 5s linear infinite;
+    --animate-spin-gradient-hover:
+        spinMovingGradient 5s linear infinite,
+        pulsateMovingGradient 0.85s ease-in-out infinite;
+    --spin-gradient-stops-dark:
+        var(--color-dark-gradient-lavender), var(--color-dark-gradient-magenta),
+        var(--color-dark-gradient-lavender), var(--color-dark-gradient-cyan),
+        var(--color-dark-gradient-lavender);
+    --spin-gradient-stops-light:
+        var(--color-light-gradient-magenta), var(--color-light-gradient-purple),
+        var(--color-light-gradient-magenta), var(--color-light-gradient-orange),
+        var(--color-light-gradient-magenta);
 
     @keyframes moveHorizontal {
         0% {
@@ -82,5 +106,25 @@
             background-position: 0% 50%;
         }
     }
-}
 
+    @keyframes spinMovingGradient {
+        0% {
+            --spin-gradient-angle: 0deg;
+        }
+        100% {
+            --spin-gradient-angle: 360deg;
+        }
+    }
+
+    @keyframes pulsateMovingGradient {
+        0%,
+        100% {
+            opacity: 0.5;
+            filter: blur(12px);
+        }
+        5% {
+            opacity: 0.9;
+            filter: blur(15px);
+        }
+    }
+}

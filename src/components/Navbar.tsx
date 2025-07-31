@@ -26,7 +26,7 @@ export default function NavBar() {
     return (
         <nav className="text-text-dark-secondary dark:text-text-light-secondary px-mobile-header-footer-x md:px-desktop-s-x lg:px-desktop-l-x xl:px-desktop-xl-x border-border-light bg-background-light-primary/80 dark:border-border-dark dark:bg-background-dark-primary/80 sticky top-0 z-10 flex h-16 w-full flex-row justify-between border-b-1 backdrop-blur-sm">
             <div className="flex flex-row items-center gap-20">
-                <Link href="/" className="font-bold font-unbounded">
+                <Link href="/" className="font-unbounded font-bold">
                     KC
                 </Link>
                 <div className="hidden flex-row items-center gap-10 text-sm md:flex">
