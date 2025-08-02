@@ -7,7 +7,6 @@ interface GlowingEffectProps {
     inactiveZone?: number;
     proximity?: number;
     spread?: number;
-    variant?: "dark" | "light";
     className?: string;
     disabled?: boolean;
     movementDuration?: number;
@@ -19,7 +18,6 @@ const MouseBorderEffect = memo(
         inactiveZone = 0.7,
         proximity = 0,
         spread = 20,
-        variant = "dark",
         className = "",
         movementDuration = 2,
         borderWidth = 1,
@@ -153,27 +151,16 @@ const MouseBorderEffect = memo(
                             "--start": "0",
                             "--active": "0",
                             "--glowingeffect-border-width": `${borderWidth}px`,
-                            "--gradient":
-                                variant === "light"
-                                    ? `linear-gradient(
-                  135deg,
-                  #5900ff 0%,
-                  #e736ff 35%,
-                  #fc9e05 110%
-                )`
-                                    : `
-                linear-gradient(
-                  135deg,
-                  #e736ff 0%,
-                  #885ffa 25%,
-                  #1ff4ff 110%
-                )`,
+                            "--gradient-light":
+                                "linear-gradient(135deg, var(--static-gradient-stops-light))",
+                            "--gradient-dark":
+                                "linear-gradient(135deg, var(--static-gradient-stops-dark))",
                         } as React.CSSProperties
                     }
                     className={`pointer-events-none absolute inset-0 z-0 rounded-[inherit] opacity-100 transition-opacity ${blur > 0 ? "blur-[var(--blur)]" : null} ${className} ${disabled ? "!hidden" : null}`}
                 >
                     <div
-                        className={`absolute -inset-[var(--glowingeffect-border-width)] rounded-[inherit] [mask-image:linear-gradient(#0000,#0000),conic-gradient(from_calc((var(--start)-var(--spread))*1deg),#00000000_0deg,#fff,#00000000_calc(var(--spread)*2deg))] [background-attachment:fixed] opacity-[var(--active)] [background:var(--gradient)]`}
+                        className={`absolute -inset-[var(--glowingeffect-border-width)] rounded-[inherit] [mask-image:linear-gradient(#0000,#0000),conic-gradient(from_calc((var(--start)-var(--spread))*1deg),#00000000_0deg,#fff,#00000000_calc(var(--spread)*2deg))] [background-attachment:fixed] opacity-[var(--active)] [background:var(--gradient-light)] dark:[background:var(--gradient-dark)]`}
                     />
                 </div>
             </>

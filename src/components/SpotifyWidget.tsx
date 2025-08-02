@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import type { SimplifiedArtist } from "spotify-types";
-import { RotatingBorderEffect } from "./RotatingBorderEffect";
+import { RotatingBorderEffect } from "./effects/RotatingBorderEffect";
 
 const CLIENT_ID = process.env.SPOTIFY_CLIENT_ID ?? "";
 const CLIENT_SECRET = process.env.SPOTIFY_CLIENT_SECRET ?? "";
@@ -64,7 +64,7 @@ export async function SpotifyWidget() {
         return (
             <RotatingBorderEffect
                 borderWidth={2}
-                className="w-full rounded-full lg:max-w-1/2"
+                className="w-fit rounded-full lg:max-w-1/2"
             >
                 <div className="rounded-full">
                     <div className="bg-background-light-secondary dark:bg-background-dark-secondary relative z-1 flex flex-row gap-5 rounded-full px-2 py-2">
@@ -89,8 +89,8 @@ export async function SpotifyWidget() {
                                 height={48}
                             />
                         </a>
-                        <div className="flex flex-col justify-between overflow-hidden">
-                            <p className="pr-3 text-xs leading-none">
+                        <div className="flex flex-col justify-between overflow-hidden pr-5">
+                            <p className="text-xs leading-none">
                                 Last listened to
                             </p>
                             <div className="flex flex-col">
@@ -98,11 +98,11 @@ export async function SpotifyWidget() {
                                     href={track.external_urls.spotify ?? ""}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="text-text-dark-primary dark:text-text-light-primary overflow-hidden pr-2 text-sm font-semibold text-nowrap text-ellipsis hover:underline"
+                                    className="text-text-dark-primary dark:text-text-light-primary overflow-hidden text-sm font-semibold text-nowrap text-ellipsis hover:underline"
                                 >
                                     {track.name}
                                 </a>
-                                <span className="text-text-dark-secondary dark:text-text-light-secondary overflow-hidden pr-3 text-xs font-medium text-ellipsis whitespace-nowrap">
+                                <span className="text-text-dark-secondary dark:text-text-light-secondary overflow-hidden text-xs font-medium text-ellipsis whitespace-nowrap">
                                     {track.artists.map(
                                         (
                                             artist: SimplifiedArtist,

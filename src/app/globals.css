@@ -8,7 +8,7 @@
     --color-background-dark-primary: #101010;
     --color-background-dark-secondary: #252525;
     --color-text-light-primary: #e8e8e8;
-    --color-text-light-secondary: #c1c1c1;
+    --color-text-light-secondary: #b0b0b0;
     --color-text-home-dark-primary: #086940;
     --color-text-home-dark-secondary: #567065;
     --color-text-dark-primary: #191919;
@@ -28,9 +28,26 @@
     --color-dark-gradient-lavender: #885ffa;
     --color-dark-gradient-magenta: #e736ff;
     --color-dark-gradient-cyan: #1ff4ff;
-    --color-light-gradient-purple: #5900ff;
-    --color-light-gradient-magenta: #e736ff;
-    --color-light-gradient-orange: #fc9e05;
+    --color-light-gradient-green: #509e42;
+    --color-light-gradient-yellow: #d4b51c;
+    --color-light-gradient-orange: #d1680d;
+
+    --static-gradient-stops-dark:
+        var(--color-dark-gradient-magenta) 0%,
+        var(--color-dark-gradient-lavender) 25%,
+        var(--color-dark-gradient-cyan) 110%;
+    --static-gradient-stops-light:
+        var(--color-light-gradient-green) 0%,
+        var(--color-light-gradient-yellow) 50%,
+        var(--color-light-gradient-orange) 105%;
+    --spin-gradient-stops-dark:
+        var(--color-dark-gradient-lavender), var(--color-dark-gradient-magenta),
+        var(--color-dark-gradient-lavender), var(--color-dark-gradient-cyan),
+        var(--color-dark-gradient-lavender);
+    --spin-gradient-stops-light:
+        var(--color-light-gradient-yellow), var(--color-light-gradient-green),
+        var(--color-light-gradient-yellow), var(--color-light-gradient-orange),
+        var(--color-light-gradient-yellow);
 }
 
 @property --spin-gradient-angle {
@@ -50,14 +67,6 @@
     --animate-spin-gradient-hover:
         spinMovingGradient 5s linear infinite,
         pulsateMovingGradient 0.85s ease-in-out infinite;
-    --spin-gradient-stops-dark:
-        var(--color-dark-gradient-lavender), var(--color-dark-gradient-magenta),
-        var(--color-dark-gradient-lavender), var(--color-dark-gradient-cyan),
-        var(--color-dark-gradient-lavender);
-    --spin-gradient-stops-light:
-        var(--color-light-gradient-magenta), var(--color-light-gradient-purple),
-        var(--color-light-gradient-magenta), var(--color-light-gradient-orange),
-        var(--color-light-gradient-magenta);
 
     @keyframes moveHorizontal {
         0% {

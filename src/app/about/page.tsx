@@ -1,6 +1,6 @@
+import { ExperienceList } from "@/components/about/ExperienceList";
 import { HeadshotContainer } from "@/components/about/HeadshotContainer";
 import { Header } from "@/components/Header";
-import { SkillCard } from "@/components/SkillCard";
 
 export default function AboutPage() {
     return (
@@ -31,13 +31,10 @@ export default function AboutPage() {
             </div>
             <div>
                 <Header>Experience</Header>
-                <div></div>
+                <ExperienceList />
             </div>
             <div>
-                <Header>Skills</Header>
-                <ul className="flex flex-row flex-wrap gap-3">
-                    <SkillCard skill="Next.js" />
-                </ul>
+                
             </div>
         </div>
     );

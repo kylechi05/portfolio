@@ -1,5 +1,5 @@
 import Image from "next/image";
-import EmailIcon from "./icons/EmailIcon";
+import { EmailIcon } from "@/components/icons";
 
 const ScalingHoverContainer = ({
     children,

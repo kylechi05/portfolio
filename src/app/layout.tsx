@@ -40,9 +40,9 @@ export default function RootLayout({
         >
             <body className="tracking-wide antialiased">
                 <ThemeProvider>
-                    <div className="bg-background-light-primary text-text-dark-primary dark:bg-background-dark-primary dark:text-text-light-primary min-h-screen">
+                    <div className="relative z-0 bg-background-light-primary text-text-dark-primary dark:bg-background-dark-primary dark:text-text-light-primary min-h-screen">
                         <NavBar />
-                        <div className="px-mobile-x md:px-desktop-s-x lg:px-desktop-l-x xl:px-desktop-xl-x pb-12">
+                        <div className="relative z-1 px-mobile-x md:px-desktop-s-x lg:px-desktop-l-x xl:px-desktop-xl-x pb-12">
                             {children}
                         </div>
                         <Footer />
