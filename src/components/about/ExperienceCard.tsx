@@ -111,7 +111,7 @@ export function ExperienceCard({
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            <span className="bg-background-dark-secondary dark:bg-background-light-secondary absolute inset-0 -z-1 opacity-0 blur-md transition-[opacity] duration-100 ease-linear group-hover/external:opacity-40" />
+                                            <span className="bg-light-gradient-green dark:bg-background-light-primary absolute inset-0 -z-1 opacity-0 blur-sm transition-[opacity] duration-100 ease-linear group-hover/external:opacity-50" />
                                             <OpenExternalIcon />
                                         </a>
                                     )}

@@ -127,7 +127,7 @@ export const DynamicGradientBackground = ({
 
     return (
         <div
-            className={`${containerClassName} top-0 left-0 w-full overflow-hidden bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]`}
+            className={`${containerClassName} left-0 w-full overflow-hidden bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]`}
         >
             <svg className="hidden">
                 <defs>

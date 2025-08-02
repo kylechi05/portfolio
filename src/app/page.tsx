@@ -11,12 +11,12 @@ export default function Home() {
 
     return (
         <div className="flex flex-col gap-20">
-            <div className="bg-background-light-primary/80 dark:bg-background-dark-primary/80 absolute inset-x-0 top-16 z-2 h-156 w-full" />
+            <div className="bg-background-light-primary/80 dark:bg-background-dark-primary/80 absolute inset-0 top-0 z-2 h-156 w-full" />
             <DynamicGradientBackground
-                containerClassName="absolute h-172 z-1"
+                containerClassName="absolute h-172 -top-16  z-1"
                 darkMode={theme === "dark"}
             />
-            <div className="absolute inset-0 top-16 z-3 h-156 bg-gradient-to-b from-[rgba(0,0,0,0)] from-80% to-[var(--color-background-light-primary)] to-100% dark:to-[var(--color-background-dark-primary)]" />
+            <div className="absolute inset-0 z-3 h-156 bg-gradient-to-b from-[rgba(0,0,0,0)] from-80% to-[var(--color-background-light-primary)] to-100% dark:to-[var(--color-background-dark-primary)]" />
             <div className="relative z-4 flex h-[calc(39rem)] flex-col justify-center gap-4 py-16 text-center md:py-48">
                 <h1 className="dark:text-text-light-primary font-unbounded text-text-home-dark-primary text-3xl font-semibold md:text-5xl lg:text-6xl">
                     Kyle Chi

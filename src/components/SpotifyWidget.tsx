@@ -67,7 +67,7 @@ export async function SpotifyWidget() {
                 className="w-fit rounded-full lg:max-w-1/2"
             >
                 <div className="rounded-full">
-                    <div className="bg-background-light-secondary dark:bg-background-dark-secondary relative z-1 flex flex-row gap-5 rounded-full px-2 py-2">
+                    <div className="bg-background-light-secondary dark:bg-background-dark-secondary flex flex-row gap-5 rounded-full px-2 py-2">
                         <a
                             href={track.album.external_urls.spotify ?? ""}
                             target="_blank"
