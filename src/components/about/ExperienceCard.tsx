@@ -16,7 +16,7 @@ function ImageFramer({
 }) {
     return (
         <div
-            className={`${isOpen ? "h-32 w-full p-3 md:size-42 md:self-start md:p-8" : "p-6 md:self-center"} relative flex size-42 shrink-0 grow-0 flex-row items-center justify-center rounded-lg object-contain transition-[width,height,padding] duration-100 ease-linear md:size-15 md:p-1`}
+            className={`${isOpen ? "h-32 w-full p-3 md:size-40 md:self-start md:p-8" : "p-6 md:self-center"} relative flex size-42 shrink-0 grow-0 flex-row items-center justify-center rounded-lg object-contain transition-[width,height,padding] duration-100 ease-linear md:size-15 md:p-1`}
             style={{
                 backgroundColor: backgroundColor,
             }}
@@ -68,19 +68,21 @@ export function ExperienceCard({
         className?: string;
     }) => (
         <div
-            className={`${className} bg-background-dark-secondary text-text-light-primary dark:bg-background-light-primary dark:text-text-dark-primary relative z-0 rounded-[inherit] px-3 py-1 text-sm font-semibold transition-[scale] duration-100 group-hover:scale-105`}
+            className={`${className} group/button bg-background-dark-secondary text-text-light-primary dark:bg-background-light-primary dark:text-text-dark-primary relative z-0 rounded-[inherit] px-3 py-1 text-sm font-semibold transition-[scale] duration-100 ${!isOpen ? "group-hover/card:scale-105" : "hover:scale-105"}`}
             onClick={() => enabled && setIsOpen((prev) => !prev)}
         >
             {isOpen ? "Close" : "More"}
-            <div className="bg-background-dark-primary dark:bg-background-light-primary absolute inset-0 -z-1 rounded-[inherit] opacity-0 transition-all duration-100 ease-linear group-hover:-inset-3 group-hover:opacity-5 md:rounded-[20px]" />
+            <div
+                className={`bg-background-dark-primary dark:bg-background-light-primary absolute inset-0 -z-1 rounded-[inherit] opacity-0 transition-all duration-100 ease-linear ${!isOpen ? "group-hover/card:-inset-3 group-hover/card:opacity-5" : "group-hover/button:-inset-3 group-hover/button:opacity-5"} md:rounded-[20px]`}
+            />
         </div>
     );
 
     return (
         <>
             <div
-                className="group relative cursor-pointer"
-                onClick={() => setIsOpen((prev) => !prev)}
+                className="group/card relative cursor-pointer"
+                onClick={() => !isOpen && setIsOpen((prev) => !prev)}
             >
                 <div
                     className={`bg-background-light-primary hover:bg-background-light-secondary/50 dark:bg-background-dark-primary hover:dark:bg-background-dark-secondary/50 z-0 flex flex-col items-center gap-3 rounded-2xl p-4 transition-[gap,background] duration-100 ease-linear md:flex-row md:items-start ${isOpen ? "md:gap-12" : null}`}
@@ -96,16 +98,22 @@ export function ExperienceCard({
                             isOpen ? "md:py-0" : "md:py-2"
                         }`}
                     >
-                        <div className="flex w-full flex-col items-center justify-between md:flex-row">
+                        <div className="flex w-full flex-col items-center justify-between gap-4 md:flex-row">
                             <div className="flex flex-col gap-0.5">
                                 <h1 className="hidden flex-row items-center text-base font-medium md:flex">
                                     <span>
                                         {title} · {location}
                                     </span>
                                     {isOpen && (
-                                        <span className="pl-3">
+                                        <a
+                                            className="group/external relative ml-3 stroke-current p-1 transition-[scale] duration-100 ease-linear hover:scale-[115%]"
+                                            href={externalUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            <span className="bg-background-dark-secondary dark:bg-background-light-secondary absolute inset-0 -z-1 opacity-0 blur-md transition-[opacity] duration-100 ease-linear group-hover/external:opacity-40" />
                                             <OpenExternalIcon />
-                                        </span>
+                                        </a>
                                     )}
                                 </h1>
                                 <div className="flex flex-col items-center md:hidden">
@@ -124,7 +132,7 @@ export function ExperienceCard({
                             </div>
                             <MoreInfoButton
                                 className="mr-10 hidden w-fit rounded-lg md:block"
-                                enabled={false}
+                                enabled={isOpen}
                             />
                         </div>
                         <div
@@ -162,9 +170,21 @@ export function ExperienceCard({
                     >
                         {logo}
                     </ImageFramer>
-                    <div className="flex w-full flex-row items-center justify-between">
+                    <div className="flex w-full flex-row items-center justify-between gap-3">
                         <div className="flex-flex-col w-full">
-                            <h1 className="font-medium">{title}</h1>
+                            <h1 className="flex flex-row items-center font-medium">
+                                {title}
+                                {isOpen && (
+                                    <a
+                                        className="ml-3 stroke-current p-1"
+                                        href={externalUrl}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        <OpenExternalIcon />
+                                    </a>
+                                )}
+                            </h1>
                             <h2 className="text-text-dark-secondary dark:text-text-light-secondary flex flex-col text-sm">
                                 <span>{location}</span>
                                 <span>{date}</span>

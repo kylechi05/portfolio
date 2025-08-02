@@ -15,7 +15,7 @@ export function ExperienceList() {
                         height={128}
                         width={128}
                         alt="W.R. Berkley Logo"
-                        className="object-contain p-1 max-h-full"
+                        className="max-h-full object-contain p-1"
                     />
                 }
                 logoBackgroundColor="#ffffff"
@@ -46,7 +46,7 @@ export function ExperienceList() {
                         height={128}
                         width={128}
                         alt="SeatStock logo"
-                        className="object-contain p-1 max-h-full"
+                        className="max-h-full object-contain p-1"
                     />
                 }
                 logoBackgroundColor="#ffffff"
@@ -77,14 +77,13 @@ export function ExperienceList() {
                         height={128}
                         width={128}
                         alt="University of Iowa Gold Logo"
-                        className="object-contain max-h-full"
+                        className="max-h-full object-contain"
                     />
                 }
                 logoBackgroundColor="#000000"
                 description={[
                     "Acquired historic Reddit data from 16 mental health-related subreddits dating back 15+ years, speeding up data collection by 50%. Processed and filtered millions of posts used to train a mental health NLP model.",
                     "Subreddits explored include: r/Anxiety, r/AnxietyDepression, r/Anxietyhelp, r/bipolar, r/depressed, etc.",
-                    
                 ]}
                 skills={["Python"]}
             />
@@ -99,7 +98,7 @@ export function ExperienceList() {
                         height={128}
                         width={128}
                         alt="University of Iowa Gold Logo"
-                        className="object-contain max-h-full"
+                        className="max-h-full object-contain"
                     />
                 }
                 logoBackgroundColor="#000000"

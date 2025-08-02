@@ -33,9 +33,7 @@ export default function AboutPage() {
                 <Header>Experience</Header>
                 <ExperienceList />
             </div>
-            <div>
-                
-            </div>
+            <div></div>
         </div>
     );
 }
