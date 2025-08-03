@@ -28,9 +28,9 @@
     --color-dark-gradient-lavender: #885ffa;
     --color-dark-gradient-magenta: #e736ff;
     --color-dark-gradient-cyan: #1ff4ff;
-    --color-light-gradient-green: #509e42;
-    --color-light-gradient-yellow: #d4b51c;
-    --color-light-gradient-orange: #d1680d;
+    --color-light-gradient-green: #5ac248;
+    --color-light-gradient-yellow: #d4c311;
+    --color-light-gradient-orange: #e67b1e;
 
     --static-gradient-stops-dark:
         var(--color-dark-gradient-magenta) 0%,

@@ -70,7 +70,7 @@ export function ExperienceList() {
                 title="Research Assistant"
                 location="University of Iowa"
                 externalUrl="https://uiowa.edu/"
-                date="May - Aug 2024"
+                date="May – Aug 2024"
                 logo={
                     <Image
                         src="/logos/iowa-gold.png"
@@ -91,7 +91,7 @@ export function ExperienceList() {
                 title="Software Engineering Intern"
                 location="University of Iowa"
                 externalUrl="https://dsri.uiowa.edu/"
-                date="June - Aug 2022"
+                date="June – Aug 2022"
                 logo={
                     <Image
                         src="/logos/iowa-gold.png"

@@ -136,7 +136,7 @@ export function ExperienceCard({
                             />
                         </div>
                         <div
-                            className={`hidden overflow-hidden opacity-0 transition-[grid-template-rows,opacity,padding,height] md:grid ${isOpen ? "grid-rows-[1fr] pt-5 pb-2 opacity-100 delay-50 duration-100" : "grid-rows-[0fr] pt-0 pb-0 opacity-0 delay-0 duration-0"}`}
+                            className={`hidden overflow-hidden opacity-0 transition-[grid-template-rows,opacity,padding] md:grid ${isOpen ? "grid-rows-[1fr] pt-5 pb-2 opacity-100 delay-50 duration-100" : "grid-rows-[0fr] pt-0 pb-0 opacity-0 delay-0 duration-0"}`}
                         >
                             <div
                                 className={`flex w-[70%] flex-col gap-5 overflow-hidden text-start`}
