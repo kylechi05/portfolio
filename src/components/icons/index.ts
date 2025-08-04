@@ -4,3 +4,8 @@ export { default as SunIcon } from "./SunIcon";
 export { default as HandwaveIcon } from "./HandwaveIcon";
 export { default as EmailIcon } from "./EmailIcon";
 export { default as OpenExternalIcon } from "./OpenExternalIcon";
+export { default as UIGradesIcon } from "./UIGradesIcon";
+export { default as CivSentinelIcon } from "./CivSentinelIcon";
+export { default as LearningProjectsIcon } from "./LearningProjectsIcon";
+export { default as PortfolioIcon } from "./PortfolioIcon";
+export { default as SpreadSimIcon } from "./SpreadSimIcon";

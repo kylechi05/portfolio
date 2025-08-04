@@ -1,7 +1,16 @@
+import {
+    CivSentinelIcon,
+    UIGradesIcon,
+    SpreadSimIcon,
+    LearningProjectsIcon,
+    PortfolioIcon,
+} from "@/components/icons";
+
 interface Project {
     title: string;
     subtitle: string;
-    skills: string[];
+    techStack: string[];
+    externalUrl: string;
     order: number;
     image: React.ReactNode;
     children?: React.ReactNode;
@@ -11,7 +20,7 @@ const projects: Project[] = [
     {
         title: "CivSentinel",
         subtitle: "Live crime mapper and AI crime predictor.",
-        skills: [
+        techStack: [
             "Apache Kafka",
             "Docker",
             "Supabase",
@@ -24,11 +33,11 @@ const projects: Project[] = [
             "Leaflet.js",
             "Tailwind CSS",
         ],
+        externalUrl: "https://github.com/kylechi05/CivSentinel",
         order: 1,
-        image: <div></div>,
+        image: <CivSentinelIcon />,
         children: (
             <div className="flex flex-col gap-3">
-                <h1>About</h1>
                 <p>
                     CivSentinel is a live crime mapping application focused on
                     the University of Iowa area. It continuously scrapes and
@@ -44,23 +53,6 @@ const projects: Project[] = [
                     also hope to experiment with Kubernetes (Minikube) to deepen
                     my understanding of container orchestration.
                 </p>
-                <h1>My Experience</h1>
-                <p>
-                    My goal with this project has been to deepen my
-                    understanding of system design while becoming more
-                    comfortable working in a microservices architecture. I
-                    scoped CivSentinel to be both technically broad and deep –
-                    challenging enough to learn new tools, but focused enough to
-                    remain practical.
-                </p>
-                <p>
-                    This project has sharpened my frontend skills with React and
-                    Next.js, backend development with Python, database design
-                    and querying, and Docker-based containerization. It&apos;s
-                    also introduced me to tools like Apache Kafka for
-                    event-driven pipelines and will soon involve working with
-                    PyTorch and Kubernetes.
-                </p>
             </div>
         ),
     },
@@ -68,7 +60,7 @@ const projects: Project[] = [
         title: "UIGrades",
         subtitle:
             "The University of Iowa's course grade distribution visualizer.",
-        skills: [
+        techStack: [
             "Next.js",
             "React.js",
             "MongoDB",
@@ -77,11 +69,11 @@ const projects: Project[] = [
             "SendGrid",
             "Tailwind CSS",
         ],
+        externalUrl: "https://uigrades.vercel.app/",
         order: 2,
-        image: <div></div>,
+        image: <UIGradesIcon />,
         children: (
             <div className="flex flex-col gap-3">
-                <h1>About</h1>
                 <p>
                     UIGrades is a web application that helps University of Iowa
                     students explore historical course and section grade
@@ -95,19 +87,8 @@ const projects: Project[] = [
                     Government. I contributed to the original version of
                     UIGrades, which was built with React.js, Tailwind CSS, and
                     SQL. About a year later, I redesigned the platform in Figma
-                    and modernized the entire codebase using Next.js,
-                    replacing SQL with MongoDB for greater flexibility and
-                    scalability.
-                </p>
-                <h1>My Experience</h1>
-                <p>
-                    I originally joined the project to learn React, contributing
-                    minor open-source improvements such as bug fixes and UI
-                    enhancements. As I grew more comfortable with the
-                    technologies, I took over the project from the previous
-                    lead, redesigning and rebuilding the site to improve
-                    performance, modernize the interface, and streamline the
-                    user experience.
+                    and modernized the entire codebase using Next.js, replacing
+                    SQL with MongoDB for greater flexibility and scalability.
                 </p>
             </div>
         ),
@@ -116,25 +97,28 @@ const projects: Project[] = [
         title: "SpreadSim",
         subtitle:
             "An educational simulation game based on computational epidemiology.",
-        skills: ["Godot Engine", "GDScript"],
+        techStack: ["Godot Engine", "GDScript"],
+        externalUrl: "https://devpost.com/software/spreadsim",
         order: 3,
-        image: <div></div>,
+        image: <SpreadSimIcon />,
         children: <div></div>,
     },
     {
         title: "Portfolio",
         subtitle: "My Porfolio.",
-        skills: ["Next.js", "React.js", "Tailwind CSS", "Figma"],
+        techStack: ["Next.js", "React.js", "Tailwind CSS", "Figma"],
+        externalUrl: "https://kylechi.vercel.app/",
         order: 4,
-        image: <div></div>,
+        image: <PortfolioIcon />,
         children: <div></div>,
     },
     {
         title: "Learning Projects",
         subtitle: "Learn about my progression and how I got into programming.",
-        skills: ["React.js", "HTML", "CSS", "JavaScript"],
+        techStack: ["React.js", "HTML", "CSS", "JavaScript"],
+        externalUrl: "https://github.com/kylechi05?tab=repositories",
         order: 5,
-        image: <div></div>,
+        image: <LearningProjectsIcon />,
         children: <div></div>,
     },
 ];

@@ -16,6 +16,8 @@ export default function ProjectsPage() {
                                         key={project.title}
                                         title={project.title}
                                         subtitle={project.subtitle}
+                                        techStack={project.techStack}
+                                        externalUrl={project.externalUrl}
                                         image={project.image}
                                     >
                                         {project.children}
@@ -32,6 +34,8 @@ export default function ProjectsPage() {
                                         key={project.title}
                                         title={project.title}
                                         subtitle={project.subtitle}
+                                        techStack={project.techStack}
+                                        externalUrl={project.externalUrl}
                                         image={project.image}
                                     >
                                         {project.children}
@@ -49,6 +53,8 @@ export default function ProjectsPage() {
                             key={project.title}
                             title={project.title}
                             subtitle={project.subtitle}
+                            techStack={project.techStack}
+                            externalUrl={project.externalUrl}
                             image={project.image}
                         >
                             {project.children}

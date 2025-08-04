@@ -42,7 +42,7 @@ export default function RootLayout({
                 <ThemeProvider>
                     <div className="bg-background-light-primary text-text-dark-primary dark:bg-background-dark-primary dark:text-text-light-primary relative min-h-screen">
                         <NavBar />
-                        <div className="relative z-1 px-mobile-x md:px-desktop-s-x lg:px-desktop-l-x xl:px-desktop-xl-x pb-12">
+                        <div className="px-mobile-x md:px-desktop-s-x lg:px-desktop-l-x xl:px-desktop-xl-x relative z-1 pb-12">
                             {children}
                         </div>
                         <Footer />

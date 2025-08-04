@@ -31,7 +31,7 @@ export default function NavBar() {
                     className="group/home font-unbounded text-text-dark-primary dark:text-text-light-primary relative font-bold"
                 >
                     KC
-                    <span className="-z-1 bg-light-gradient-green dark:bg-background-light-primary absolute inset-0 opacity-0 blur-md transition-opacity duration-100 group-hover/home:opacity-60" />
+                    <span className="bg-light-gradient-green dark:bg-background-light-primary absolute inset-0 -z-1 opacity-0 blur-md transition-opacity duration-100 group-hover/home:opacity-60" />
                 </Link>
                 <div className="hidden flex-row items-center gap-10 text-sm md:flex">
                     <HoverLink href="/about">About</HoverLink>
