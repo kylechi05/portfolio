@@ -16,6 +16,63 @@ interface Project {
     children?: React.ReactNode;
 }
 
+interface LearningProject {
+    title: string;
+    description: string;
+    date: string;
+}
+
+const learningProjects: LearningProject[] = [
+    {
+        title: "Beatmaker",
+        description:
+            "A GarageBand-style music creation website built during HackUIowa '23. This was my first project and was developed using JavaScript, HTML, and CSS.",
+        date: "Sep 2023",
+    },
+    {
+        title: "Weather App",
+        description:
+            "A simple weather application built to practice working with REST APIs using JavaScript, Node.js, and Express.",
+        date: "Oct 2023",
+    },
+    {
+        title: "Tic-Tac-Toe",
+        description:
+            "A basic Tic-Tac-Toe game developed to explore the fundamentals of React.js.",
+        date: "Jan 2024",
+    },
+    {
+        title: "To-do List",
+        description:
+            "A standard to-do list app created to further develop my React.js skills and gain initial experience with databases.",
+        date: "Feb 2024",
+    },
+    {
+        title: "Dogs vs. Cats Image Classifier",
+        description:
+            "An image classification model developed using Keras and CNNs as an introduction to Deep Learning during my time as an Undergraduate Researcher at the University of Iowa.",
+        date: "May 2024",
+    },
+    {
+        title: "FashionMNIST Image Classifier",
+        description:
+            "First project for CS4420 – Artificial Intelligence. Used PyTorch and CNNs to perform image classification on the FashionMNIST dataset.",
+        date: "Feb 2025",
+    },
+    {
+        title: "Hospital Management System",
+        description:
+            "Final project for CS4400 – Database Systems. Built using a data-driven development approach, including data analysis, ER diagrams, normalization, and stored procedures in MySQL Workbench.",
+        date: "Apr 2025",
+    },
+    {
+        title: "IMDb Movie Review Classifier",
+        description:
+            "Final project for CS4420 – Artificial Intelligence. Used PyTorch and LSTMs to perform sentiment analysis and text classification on IMDb movie reviews.",
+        date: "Apr 2025",
+    },
+];
+
 const projects: Project[] = [
     {
         title: "CivSentinel",
@@ -53,6 +110,18 @@ const projects: Project[] = [
                     also hope to experiment with Kubernetes (Minikube) to deepen
                     my understanding of container orchestration.
                 </p>
+                <div>
+                    <p>
+                        <a
+                            href="https://github.com/kylechi05/CivSentinel"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            GitHub
+                        </a>
+                    </p>
+                </div>
             </div>
         ),
     },
@@ -79,7 +148,8 @@ const projects: Project[] = [
                     students explore historical course and section grade
                     distributions. Since its launch in October 2023, the site
                     has garnered over 800K views from more than 20K unique users
-                    – nearly two-thirds of the university&apos;s student body.
+                    &ndash; nearly two-thirds of the university&apos;s student
+                    body.
                 </p>
                 <p>
                     The project began as a collaboration between the University
@@ -87,9 +157,31 @@ const projects: Project[] = [
                     Government. I contributed to the original version of
                     UIGrades, which was built with React.js, Tailwind CSS, and
                     SQL. About a year later, I redesigned the platform in Figma
-                    and modernized the entire codebase using Next.js, replacing
-                    SQL with MongoDB for greater flexibility and scalability.
+                    and modernized the project using Next.js, replacing SQL with
+                    MongoDB for greater flexibility and scalability.
                 </p>
+                <div>
+                    <p>
+                        <a
+                            href=""
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            Figma
+                        </a>
+                    </p>
+                    <p>
+                        <a
+                            href="https://github.com/acm-uiowa/uigrades"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            GitHub
+                        </a>
+                    </p>
+                </div>
             </div>
         ),
     },
@@ -101,7 +193,33 @@ const projects: Project[] = [
         externalUrl: "https://devpost.com/software/spreadsim",
         order: 3,
         image: <SpreadSimIcon />,
-        children: <div></div>,
+        children: (
+            <div className="flex flex-col gap-3">
+                <p>
+                    Built at Swan Hacks 2024, SpreadSim is an educational
+                    simulation game based on computational epidemiology
+                    research. It illustrates virus transmission and models the
+                    impact of various preventative measures on transmission
+                    flow.
+                </p>
+                <p>
+                    3rd place winner &ndash; Swan Hacks 2024 @ Iowa State
+                    University
+                </p>
+                <div>
+                    <p>
+                        <a
+                            href="https://github.com/kylechi05/SwanHacks2024"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            GitHub
+                        </a>
+                    </p>
+                </div>
+            </div>
+        ),
     },
     {
         title: "Portfolio",
@@ -110,16 +228,61 @@ const projects: Project[] = [
         externalUrl: "https://kylechi.vercel.app/",
         order: 4,
         image: <PortfolioIcon />,
-        children: <div></div>,
+        children: (
+            <div className="flex flex-col gap-3">
+                <p>
+                    This is my personal portfolio, Designed in Figma and built
+                    with Next.js, React, and Tailwind.
+                </p>
+                <div>
+                    <p>
+                        <a
+                            href="https://github.com/kylechi05/portfolio"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            GitHub
+                        </a>
+                    </p>
+                </div>
+            </div>
+        ),
     },
     {
         title: "Learning Projects",
-        subtitle: "Learn about my progression and how I got into programming.",
-        techStack: ["React.js", "HTML", "CSS", "JavaScript"],
+        subtitle:
+            "Learn about my progression through beginner projects. *Note* Not all projects will be in GitHub",
+        techStack: [
+            "Keras",
+            "PyTorch",
+            "React.js",
+            "Node.js",
+            "Express",
+            "SQL",
+            "JavaScript",
+            "HTML",
+            "CSS",
+            "MySQL",
+        ],
         externalUrl: "https://github.com/kylechi05?tab=repositories",
         order: 5,
         image: <LearningProjectsIcon />,
-        children: <div></div>,
+        children: (
+            <div className="flex flex-col gap-3">
+                {learningProjects.map((proj) => (
+                    <div key={proj.title} className="flex flex-row gap-6 items-baseline">
+                        <h2 className="w-fit shrink-0 text-xs">{proj.date}</h2>
+                        <div>
+                            <h1 className="text-text-dark-primary dark:text-text-light-primary font-medium">
+                                {proj.title}
+                            </h1>
+                            <h2>{proj.description}</h2>
+                        </div>
+                    </div>
+                ))}
+            </div>
+        ),
     },
 ];
 

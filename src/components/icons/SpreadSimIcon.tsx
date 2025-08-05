@@ -9,6 +9,11 @@ export default function SpreadSimIcon() {
             strokeWidth={2}
             fill="none"
         >
+            <defs>
+                <clipPath id="circle-clip">
+                    <path d="M0,0 H24 V24 H0 V0 Z M16.5,17 m-9,0 a9,9,0,1,0,18,0 a9,9,0,1,0,-18,0 Z" />
+                </clipPath>
+            </defs>
             <path
                 d="M2,1 H14 M4,1 V19 A2,2,0,0,0,12,19 V2 M4,9 H12"
                 clipPath="url(#circle-clip)"
@@ -56,10 +61,6 @@ export default function SpreadSimIcon() {
                     />
                 );
             })}
-
-            <clipPath id="circle-clip">
-                <path d="M0,0 H24 V24 H0 V0 Z M16.5,17 m-9,0 a9,9,0,1,0,18,0 a9,9,0,1,0,-18,0 Z" />
-            </clipPath>
         </svg>
     );
 }

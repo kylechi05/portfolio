@@ -15,7 +15,7 @@ function ImageFramer({
 }) {
     return (
         <div
-            className={`${isOpen ? "h-12 w-full md:self-start" : "p-0"} border-border-light text-text-dark-secondary dark:text-text-light-primary bg-background-light-primary dark:bg-background-dark-primary dark:border-border-dark relative flex size-10 shrink-0 grow-0 flex-row items-center justify-center rounded-lg border-1 object-contain p-1 transition-[width,height,padding] duration-100 ease-linear`}
+            className={`${isOpen ? "h-12 w-full md:self-start" : null} border-border-light text-text-dark-secondary dark:text-text-light-primary bg-background-light-primary dark:bg-background-dark-primary dark:border-border-dark relative flex size-10 shrink-0 grow-0 flex-row items-center justify-center rounded-lg border-1 transition-[width,height] duration-100 ease-linear`}
         >
             {children}
         </div>
@@ -49,13 +49,10 @@ export function ProjectCard({
         className?: string;
     }) => (
         <div
-            className={`${className} group/button bg-background-dark-secondary text-text-light-primary dark:bg-background-light-primary dark:text-text-dark-primary relative z-0 w-fit shrink-0 grow-0 rounded-[inherit] px-3 py-1 text-sm font-semibold transition-[scale] duration-100 ${!isOpen ? "group-hover/project-card:scale-105" : "hover:scale-105"}`}
+            className={`${className} dark:border-border-dark border-border-light relative z-0 w-fit shrink-0 grow-0 rounded-[inherit] border-1 px-2.5 py-1 text-sm transition-[scale] duration-100 ${!isOpen ? "group-hover/project-card:bg-background-light-secondary/75 dark:group-hover/project-card:bg-background-dark-secondary/75 group-hover/project-card:scale-105" : "hover:bg-background-light-secondary/75 dark:hover:bg-background-dark-secondary/75 hover:scale-105"}`}
             onClick={() => enabled && setIsOpen((prev) => !prev)}
         >
             {isOpen ? "Close" : "View More"}
-            <div
-                className={`bg-background-dark-primary dark:bg-background-light-primary absolute inset-0 -z-1 rounded-[inherit] opacity-0 transition-all duration-100 ease-linear ${!isOpen ? "group-hover/project-card:-inset-3 group-hover/project-card:opacity-5" : "group-hover/button:-inset-3 group-hover/button:opacity-5"} md:rounded-[20px]`}
-            />
         </div>
     );
 
@@ -84,7 +81,7 @@ export function ProjectCard({
                                     {title}
                                     {isOpen && (
                                         <a
-                                            className="group/external relative ml-3 stroke-current p-1 transition-[scale] duration-100 ease-linear hover:scale-[115%]"
+                                            className="group/external relative stroke-current p-1 transition-[scale] duration-100 ease-linear hover:scale-[115%]"
                                             href={externalUrl}
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -100,7 +97,7 @@ export function ProjectCard({
                             </div>
 
                             <div
-                                className={`text-text-dark-secondary dark:text-text-light-secondary hidden text-sm transition-[grid-template-rows,opacity,filter] duration-150 ease-in-out md:grid ${isOpen ? "grid-rows-[1fr] opacity-100 blur-[0px]" : "grid-rows-[0fr] opacity-0 blur-[8px]"}`}
+                                className={`text-text-dark-secondary dark:text-text-light-secondary hidden overflow-hidden text-sm transition-[grid-template-rows,opacity,filter,margin] duration-150 ease-in-out md:grid ${isOpen ? "m-0 grid-rows-[1fr] opacity-100 blur-[0px]" : "grid-rows-[0fr] opacity-0 blur-[8px] md:-m-3.75"}`}
                             >
                                 <div className="flex flex-col gap-8 overflow-hidden">
                                     {children}
@@ -127,8 +124,8 @@ export function ProjectCard({
                 className={`px-mobile-x bg-background-light-primary dark:bg-background-dark-primary fixed inset-x-0 top-16 bottom-0 z-10 flex flex-col items-center gap-5 py-3 text-start transition-opacity duration-100 md:hidden ${isOpen ? "opacity-100" : "pointer-events-none opacity-0"}`}
             >
                 <ImageFramer isOpen={isOpen}>{image}</ImageFramer>
-                <div className="flex w-full flex-row items-center justify-between gap-3">
-                    <div className="flex-flex-col w-full">
+                <div className="relative flex w-full flex-row items-center justify-between gap-3">
+                    <div className="z-1 flex-flex-col w-full">
                         <h1 className="flex flex-row items-center font-medium">
                             {title}
                             {isOpen && (
@@ -146,7 +143,8 @@ export function ProjectCard({
                             {subtitle}
                         </h2>
                     </div>
-                    <ViewMoreButton className="w-fit rounded-full" />
+                    <ViewMoreButton className="z-1 w-fit rounded-full" />
+                    <div className="absolute -bottom-6 top-0 -inset-x-6 backdrop-blur-sm"/>
                 </div>
                 <div className="flex h-full w-full flex-col gap-5 overflow-y-auto pt-2 pb-8">
                     <div className="text-text-dark-secondary dark:text-text-light-secondary text-sm">

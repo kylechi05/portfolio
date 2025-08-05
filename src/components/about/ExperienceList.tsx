@@ -8,7 +8,7 @@ export function ExperienceList() {
                 title="Software Developer Intern"
                 location="W.R. Berkley"
                 externalUrl="https://www.berkley.com/"
-                date="May – Aug 2025"
+                date="May &ndash; Aug 2025"
                 logo={
                     <Image
                         src="/logos/wrberkley.png"
@@ -29,6 +29,7 @@ export function ExperienceList() {
                     "React.js",
                     "Docker",
                     "GraphQL",
+                    "Jenkins",
                     "Jest",
                     "TypeScript",
                     "JavaScript",
@@ -39,7 +40,7 @@ export function ExperienceList() {
                 title="Software Engineer"
                 location="SeatStock"
                 externalUrl="https://www.seatstock.com/"
-                date="May – Oct 2024"
+                date="May &ndash; Oct 2024"
                 logo={
                     <Image
                         src="/logos/seatstock.svg"
@@ -70,7 +71,7 @@ export function ExperienceList() {
                 title="Research Assistant"
                 location="University of Iowa"
                 externalUrl="https://uiowa.edu/"
-                date="May – Aug 2024"
+                date="May &ndash; Aug 2024"
                 logo={
                     <Image
                         src="/logos/iowa-gold.png"
@@ -91,7 +92,7 @@ export function ExperienceList() {
                 title="Software Engineering Intern"
                 location="University of Iowa"
                 externalUrl="https://dsri.uiowa.edu/"
-                date="June – Aug 2022"
+                date="June &ndash; Aug 2022"
                 logo={
                     <Image
                         src="/logos/iowa-gold.png"
