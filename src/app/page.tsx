@@ -5,6 +5,7 @@ import { SocialMediaBar } from "@/components/SocialMediaBar";
 import { OtherPages } from "@/components/home/OtherPages";
 import { useTheme } from "@/context/ThemeContext";
 import HandwaveIcon from "@/components/icons/HandwaveIcon";
+import { CookingIcon, LiftingIcon, MusicIcon } from "@/components/icons";
 
 export default function Home() {
     const { theme } = useTheme();
@@ -35,11 +36,23 @@ export default function Home() {
                         </div>
                     </div>
                     <p className="text-text-home-dark-secondary dark:text-text-light-secondary">
-                        I&apos;m a computer science and math student at the
-                        University of Iowa. I enjoy fullstack development and
-                        AI/ML. Besides coding, I enjoy lifting, music, and
-                        cooking. Feel free to explore my site to learn more
-                        about me, my experience, and my projects.
+                        I&apos;m a computer science and mathematics student at
+                        the University of Iowa. I enjoy full-stack development
+                        and AI/ML. Outside of coding, my interests include
+                        lifting
+                        <span className="inline-flex translate-y-0.5 align-baseline">
+                            <LiftingIcon />
+                        </span>
+                        , listening to music
+                        <span className="inline-flex translate-y-0.5 align-baseline">
+                            <MusicIcon />
+                        </span>
+                        , and cooking
+                        <span className="inline-flex translate-y-0.75 align-baseline">
+                            <CookingIcon />
+                        </span>
+                        . Feel free to explore my site to learn more about me,
+                        my experience, and the projects I&apos;ve created.
                     </p>
                 </div>
                 <SocialMediaBar />

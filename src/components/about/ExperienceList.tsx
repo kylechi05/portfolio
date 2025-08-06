@@ -20,9 +20,9 @@ export function ExperienceList() {
                 }
                 logoBackgroundColor="#ffffff"
                 description={[
-                    "Developed support for admin user monitoring tools linked with Auth0 to expedite user information pulling and exporting speed.",
-                    "Improved maintainability by refactoring legacy components and removing incompatible libraries and tools for compiler upgrades.",
-                    "Improved microservice development logic by reorganizing repository branches and corresponding CI/CD pipelines.",
+                    "Built admin user monitoring tools integrated with Auth0, accelerating user data retrieval and export workflows.",
+                    "Enhanced maintainability by refactoring legacy components and removing incompatible dependencies for compiler upgrades.",
+                    "Streamlined microservice development by restructuring repository branches and corresponding CI/CD pipelines.",
                 ]}
                 skills={[
                     "Next.js",
@@ -52,7 +52,7 @@ export function ExperienceList() {
                 }
                 logoBackgroundColor="#ffffff"
                 description={[
-                    "Built and released a secure startup marketplace designed for university students to buy and sell student tickets hassle-free for various sporting events. Aquired 1,200+ users and transacted 150+ tickets totaling over $15,000 Gross Market Value within 3 weeks of launch.",
+                    "Built and launched a secure startup marketplace for university students to easily buy and sell student tickets for sporting events. Acquired 1,200+ users and facilitated 150+ ticket transactions totaling over $15,000 in Gross Market Value within three weeks of release.",
                 ]}
                 skills={[
                     "Next.js",
@@ -83,8 +83,8 @@ export function ExperienceList() {
                 }
                 logoBackgroundColor="#000000"
                 description={[
-                    "Acquired historic Reddit data from 16 mental health-related subreddits dating back 15+ years, speeding up data collection by 50%. Processed and filtered millions of posts used to train a mental health NLP model.",
-                    "Subreddits explored include: r/Anxiety, r/AnxietyDepression, r/Anxietyhelp, r/bipolar, r/depressed, etc.",
+                    "Acquired historic Reddit data from 16 mental health-related subreddits spanning 15+ years, speeding up data collection by 50%. Processed and filtered millions of posts to train a mental health NLP model.",
+                    "Subreddits explored include: r/Anxiety, r/AnxietyDepression, r/Anxietyhelp, r/bipolar, r/depressed, and others.",
                 ]}
                 skills={["Python"]}
             />
@@ -105,7 +105,7 @@ export function ExperienceList() {
                 logoBackgroundColor="#000000"
                 description={[
                     "Collaborated with hardware interns at the University of Iowa Driving Safety Research Institute to program a robotic car using a Raspberry Pi for demonstrations at local elementary schools.",
-                    "Configured manual driving via console controller and initiated automation to keep the car within lanes using OpenCV.",
+                    "Configured manual driving via console controller and initiated automation features with OpenCV to maintain lane positioning.",
                 ]}
                 skills={["Python", "OpenCV", "scikit-image", "Pygame"]}
             />

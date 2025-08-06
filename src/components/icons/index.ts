@@ -9,3 +9,6 @@ export { default as CivSentinelIcon } from "./CivSentinelIcon";
 export { default as LearningProjectsIcon } from "./LearningProjectsIcon";
 export { default as PortfolioIcon } from "./PortfolioIcon";
 export { default as SpreadSimIcon } from "./SpreadSimIcon";
+export { default as CookingIcon } from "./CookingIcon";
+export { default as MusicIcon } from "./MusicIcon";
+export { default as LiftingIcon } from "./LiftingIcon";

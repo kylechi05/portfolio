@@ -44,13 +44,13 @@ const learningProjects: LearningProject[] = [
     {
         title: "To-do List",
         description:
-            "A standard to-do list app created to further develop my React.js skills and gain initial experience with databases.",
+            "A standard to-do list app created to further develop my React.js skills and gain foundational experience with databases.",
         date: "Feb 2024",
     },
     {
         title: "Dogs vs. Cats Image Classifier",
         description:
-            "An image classification model developed using Keras and CNNs as an introduction to Deep Learning during my time as an Undergraduate Researcher at the University of Iowa.",
+            "An image classification model developed using Keras and CNNs as an introduction to Deep Learning during my time as an undergraduate researcher at the University of Iowa.",
         date: "May 2024",
     },
     {
@@ -62,7 +62,7 @@ const learningProjects: LearningProject[] = [
     {
         title: "Hospital Management System",
         description:
-            "Final project for CS4400 – Database Systems. Built using a data-driven development approach, including data analysis, ER diagrams, normalization, and stored procedures in MySQL Workbench.",
+            "Final project for CS4400 – Database Systems. Built using a data-driven development approach, including data analysis, ER diagrams, normalization, and stored procedures, implemented using MySQL Workbench.",
         date: "Apr 2025",
     },
     {
@@ -107,8 +107,8 @@ const projects: Project[] = [
                     using Leaflet for lightweight, interactive mapping. On the
                     backend, I plan to develop a spatiotemporal graph neural
                     network with PyTorch to predict future crime patterns. I
-                    also hope to experiment with Kubernetes (Minikube) to deepen
-                    my understanding of container orchestration.
+                    also plan to experiment with Kubernetes (Minikube) to learn
+                    about container orchestration.
                 </p>
                 <div>
                     <p>
@@ -163,7 +163,7 @@ const projects: Project[] = [
                 <div>
                     <p>
                         <a
-                            href=""
+                            href="https://www.figma.com/design/ER2GkymBrORUWpnABQYwzy/UIGrades?node-id=0-1&t=DJCZgmoNKok69R1K-1"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="underline"
@@ -223,7 +223,7 @@ const projects: Project[] = [
     },
     {
         title: "Portfolio",
-        subtitle: "My Porfolio.",
+        subtitle: "My Portfolio.",
         techStack: ["Next.js", "React.js", "Tailwind CSS", "Figma"],
         externalUrl: "https://kylechi.vercel.app/",
         order: 4,
@@ -231,8 +231,8 @@ const projects: Project[] = [
         children: (
             <div className="flex flex-col gap-3">
                 <p>
-                    This is my personal portfolio, Designed in Figma and built
-                    with Next.js, React, and Tailwind.
+                    This is my personal portfolio, designed in Figma and built
+                    with Next.js, React, and Tailwind CSS.
                 </p>
                 <div>
                     <p>
@@ -252,7 +252,7 @@ const projects: Project[] = [
     {
         title: "Learning Projects",
         subtitle:
-            "Learn about my progression through beginner projects. *Note* Not all projects will be in GitHub",
+            "Explore my progression through beginner projects. *Note*: Not all projects are on GitHub",
         techStack: [
             "Keras",
             "PyTorch",
@@ -271,7 +271,10 @@ const projects: Project[] = [
         children: (
             <div className="flex flex-col gap-3">
                 {learningProjects.map((proj) => (
-                    <div key={proj.title} className="flex flex-row gap-6 items-baseline">
+                    <div
+                        key={proj.title}
+                        className="flex flex-row items-baseline gap-6"
+                    >
                         <h2 className="w-fit shrink-0 text-xs">{proj.date}</h2>
                         <div>
                             <h1 className="text-text-dark-primary dark:text-text-light-primary font-medium">
@@ -286,12 +289,4 @@ const projects: Project[] = [
     },
 ];
 
-export const sortedProjects = projects.sort((a, b) => {
-    if (a.order < b.order) {
-        return -1;
-    } else if (a.order > b.order) {
-        return 1;
-    } else {
-        return 0;
-    }
-});
+export const sortedProjects = projects.sort((a, b) => a.order - b.order);

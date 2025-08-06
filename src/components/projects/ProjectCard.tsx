@@ -125,7 +125,7 @@ export function ProjectCard({
             >
                 <ImageFramer isOpen={isOpen}>{image}</ImageFramer>
                 <div className="relative flex w-full flex-row items-center justify-between gap-3">
-                    <div className="z-1 flex-flex-col w-full">
+                    <div className="flex-flex-col z-1 w-full">
                         <h1 className="flex flex-row items-center font-medium">
                             {title}
                             {isOpen && (
@@ -144,7 +144,7 @@ export function ProjectCard({
                         </h2>
                     </div>
                     <ViewMoreButton className="z-1 w-fit rounded-full" />
-                    <div className="absolute -bottom-6 top-0 -inset-x-6 backdrop-blur-sm"/>
+                    <div className="absolute -inset-x-6 top-0 -bottom-6 backdrop-blur-sm" />
                 </div>
                 <div className="flex h-full w-full flex-col gap-5 overflow-y-auto pt-2 pb-8">
                     <div className="text-text-dark-secondary dark:text-text-light-secondary text-sm">
