@@ -1,6 +1,13 @@
+import { Metadata } from "next";
+
 import { Header } from "@/components/Header";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { sortedProjects } from "./projects";
+
+export const metadata: Metadata = {
+    title: "Kyle Chi · Projects",
+    description: "Kyle Chi's portfolio · Projects",
+};
 
 export default function ProjectsPage() {
     return (

@@ -12,3 +12,4 @@ export { default as SpreadSimIcon } from "./SpreadSimIcon";
 export { default as CookingIcon } from "./CookingIcon";
 export { default as MusicIcon } from "./MusicIcon";
 export { default as LiftingIcon } from "./LiftingIcon";
+export { default as KCIcon } from "./KCIcon";

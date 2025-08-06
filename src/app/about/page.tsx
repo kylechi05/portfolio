@@ -1,6 +1,13 @@
+import { Metadata } from "next";
+
 import { ExperienceList } from "@/components/about/ExperienceList";
 import { HeadshotContainer } from "@/components/about/HeadshotContainer";
 import { Header } from "@/components/Header";
+
+export const metadata: Metadata = {
+    title: "Kyle Chi · About",
+    description: "Kyle Chi's portfolio · About",
+};
 
 export default function AboutPage() {
     return (

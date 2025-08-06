@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { useTheme } from "@/context/ThemeContext";
-import { MenuIcon, MoonIcon, SunIcon } from "@/components/icons";
+import { KCIcon, MenuIcon, MoonIcon, SunIcon } from "@/components/icons";
 import { HoverLink } from "@/components/HoverLink";
 
 export default function NavBar() {
@@ -30,7 +30,7 @@ export default function NavBar() {
                     href="/"
                     className="group/home font-unbounded text-text-dark-primary dark:text-text-light-primary relative font-bold"
                 >
-                    KC
+                    <KCIcon />
                     <span className="bg-light-gradient-green dark:bg-background-light-primary absolute inset-0 -z-1 opacity-0 blur-md transition-opacity duration-100 group-hover/home:opacity-60" />
                 </Link>
                 <div className="hidden flex-row items-center gap-10 text-sm md:flex">
