@@ -26,6 +26,7 @@ async function refreshAccessToken() {
             grant_type: "refresh_token",
             refresh_token: REFRESH_TOKEN,
         }),
+        cache: 'no-store',
     });
     if (!response.ok) {
         throw new Error(`Failed to refresh token: ${response.statusText}`);
@@ -43,6 +44,7 @@ async function getLastListenedTo(limit: number) {
             headers: {
                 Authorization: `Bearer ${accessToken}`,
             },
+            cache: 'no-store',
         },
     );
 
