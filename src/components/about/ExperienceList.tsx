@@ -20,9 +20,9 @@ export function ExperienceList() {
                 }
                 logoBackgroundColor="#ffffff"
                 description={[
-                    "Built admin user monitoring tools integrated with Auth0, accelerating user data retrieval and export workflows.",
+                    "Automated Kubernetes microservice deployments and Helm chart versioning with Jenkins multibranch pipelines, streamlining CI/CD workflows.",
+                    "Built admin user monitoring tools with GraphQL and Auth0, accelerating user data retrieval and export workflows.",
                     "Enhanced maintainability by refactoring legacy components and removing incompatible dependencies for compiler upgrades.",
-                    "Streamlined microservice development by restructuring repository branches and corresponding CI/CD pipelines.",
                 ]}
                 skills={[
                     "Next.js",
