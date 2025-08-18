@@ -99,16 +99,16 @@ const projects: Project[] = [
                     CivSentinel is a live crime mapping application focused on
                     the University of Iowa area. It continuously scrapes and
                     processes data from the university&apos;s public crime log,
-                    visualizing incidents in real time.
+                    visualizing incidents in real time. It also uses a
+                    spatiotemporal GNN to actively predict crimes within the
+                    next 48 hours.
                 </p>
                 <p>
                     The project is currently a work in progress. I&apos;m
                     currently building the frontend with React and Next.js,
-                    using Leaflet for lightweight, interactive mapping. On the
-                    backend, I plan to develop a spatiotemporal graph neural
-                    network with PyTorch to predict future crime patterns. I
-                    also plan to experiment with Kubernetes (Minikube) to learn
-                    about container orchestration.
+                    using Leaflet for lightweight, interactive mapping. I also
+                    plan to experiment with Kubernetes (Minikube) to learn about
+                    container orchestration.
                 </p>
                 <div>
                     <p>
