@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
+@custom-variant hover (&:hover);
 
 @theme {
     --color-background-light-primary: #faf7f0;
