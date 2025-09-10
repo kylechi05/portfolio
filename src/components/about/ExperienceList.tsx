@@ -5,10 +5,30 @@ export function ExperienceList() {
     return (
         <div className="relative z-0 flex flex-col gap-2">
             <ExperienceCard
+                title="Undergraduate Researcher"
+                location="University of Iowa"
+                externalUrl="https://uiowa.edu/"
+                date="Aug 2025 &ndash; Current"
+                logo={
+                    <Image
+                        src="/logos/iowa-gold.png"
+                        height={128}
+                        width={128}
+                        alt="University of Iowa Gold Logo"
+                        className="max-h-full object-contain"
+                    />
+                }
+                logoBackgroundColor="#000000"
+                description={[
+                    "Using machine learning to track disease load spreading.",
+                ]}
+                skills={["Machine Learning"]}
+            />
+            <ExperienceCard
                 title="Software Developer Intern"
                 location="W.R. Berkley"
                 externalUrl="https://www.berkley.com/"
-                date="May &ndash; Aug 2025"
+                date="May 2025 &ndash; Aug 2025"
                 logo={
                     <Image
                         src="/logos/wrberkley.png"
@@ -40,7 +60,7 @@ export function ExperienceList() {
                 title="Software Engineer"
                 location="SeatStock"
                 externalUrl="https://www.seatstock.com/"
-                date="May &ndash; Oct 2024"
+                date="May 2024 &ndash; Oct 2024"
                 logo={
                     <Image
                         src="/logos/seatstock.svg"
@@ -71,7 +91,7 @@ export function ExperienceList() {
                 title="Research Assistant"
                 location="University of Iowa"
                 externalUrl="https://uiowa.edu/"
-                date="May &ndash; Aug 2024"
+                date="May 2024 &ndash; Aug 2024"
                 logo={
                     <Image
                         src="/logos/iowa-gold.png"
@@ -92,7 +112,7 @@ export function ExperienceList() {
                 title="Software Engineering Intern"
                 location="University of Iowa"
                 externalUrl="https://dsri.uiowa.edu/"
-                date="June &ndash; Aug 2022"
+                date="Jun 2022 &ndash; Aug 2022"
                 logo={
                     <Image
                         src="/logos/iowa-gold.png"
