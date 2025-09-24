@@ -39,6 +39,12 @@ export default function RootLayout({
             lang="en"
             className={`${spaceGrotesk.variable} ${montserrat.variable} ${unbounded.variable} font-montserrat`}
         >
+            <head>
+                <meta
+                    name="google-site-verification"
+                    content="DwRSeIggAb_xqPNfdigPyX8wG_TyTg_8HFhdwf1THSU"
+                />
+            </head>
             <body className="tracking-wide antialiased">
                 <ThemeProvider>
                     <div className="bg-background-light-primary text-text-dark-primary dark:bg-background-dark-primary dark:text-text-light-primary relative min-h-screen">
@@ -50,7 +56,7 @@ export default function RootLayout({
                     </div>
                 </ThemeProvider>
             </body>
-            <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID ?? ""}/>
+            <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID ?? ""} />
         </html>
     );
 }
