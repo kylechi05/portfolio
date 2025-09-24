@@ -5,7 +5,7 @@ export function ExperienceList() {
     return (
         <div className="relative z-0 flex flex-col gap-2">
             <ExperienceCard
-                title="Undergraduate Researcher"
+                title="Undergraduate ML Researcher"
                 location="University of Iowa"
                 externalUrl="https://uiowa.edu/"
                 date="Aug 2025 &ndash; Current"
@@ -20,9 +20,9 @@ export function ExperienceList() {
                 }
                 logoBackgroundColor="#000000"
                 description={[
-                    "Using machine learning to track disease load spreading.",
+                    "Utilizing machine learning to track disease load spreads across networks.",
                 ]}
-                skills={["Machine Learning"]}
+                skills={["Python", "scikit-learn", "Machine Learning"]}
             />
             <ExperienceCard
                 title="Software Developer Intern"

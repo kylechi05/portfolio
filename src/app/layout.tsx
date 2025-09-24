@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Space_Grotesk, Unbounded } from "next/font/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 import "./globals.css";
 
@@ -49,6 +50,7 @@ export default function RootLayout({
                     </div>
                 </ThemeProvider>
             </body>
+            <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID ?? ""}/>
         </html>
     );
 }
