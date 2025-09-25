@@ -20,7 +20,7 @@ export function ExperienceList() {
                 }
                 logoBackgroundColor="#000000"
                 description={[
-                    "Utilizing machine learning to track disease load spreads across networks.",
+                    "Applying expectation-maximization algorithms to model disease load propagation across networks with asymptomatic patient cases.",
                 ]}
                 skills={["Python", "scikit-learn", "Machine Learning"]}
             />
