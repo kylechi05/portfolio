@@ -5,26 +5,6 @@ export function ExperienceList() {
     return (
         <div className="relative z-0 flex flex-col gap-2">
             <ExperienceCard
-                title="Undergraduate ML Researcher"
-                location="University of Iowa"
-                externalUrl="https://uiowa.edu/"
-                date="Aug 2025 &ndash; Current"
-                logo={
-                    <Image
-                        src="/logos/iowa-gold.png"
-                        height={128}
-                        width={128}
-                        alt="University of Iowa Gold Logo"
-                        className="max-h-full object-contain"
-                    />
-                }
-                logoBackgroundColor="#000000"
-                description={[
-                    "Applying expectation-maximization algorithms to model disease load propagation across networks with asymptomatic patient cases.",
-                ]}
-                skills={["Python", "scikit-learn", "Machine Learning"]}
-            />
-            <ExperienceCard
                 title="Software Developer Intern"
                 location="W.R. Berkley"
                 externalUrl="https://www.berkley.com/"
